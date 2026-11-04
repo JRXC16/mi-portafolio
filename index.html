@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio MPA - Vite & LESS</title>
+  <!-- Importación de LESS en Vite -->
+  <link rel="stylesheet" href="./src/styless.less">
+</head>
+<body>
+
+  <!-- 1. NavBar -->
+  <header class="navbar">
+    <div class="logo">MiPortafolio</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#acerca">Acerca</a></li>
+    </ul>
+  </header>
+
+  <!-- 2. Hero Panel -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a mi Sitio Web</h1>
+    <p>Desarrollado con Vite, LESS y arquitectura MPA.</p>
+    <a href="#servicios" class="btn">Explorar Servicios</a>
+  </section>
+
+  <!-- 3. Cards (3 mínimo) -->
+  <section id="servicios" class="cards-section">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Desarrollo Web</h3>
+        <p>Creamos sitios web modernos, rápidos y optimizados para cualquier dispositivo utilizando tecnologías actuales.</p>
+      </div>
+      <div class="card">
+        <h3>Diseño UI/UX</h3>
+        <p>Interfaces atractivas centradas en la experiencia del usuario para garantizar una navegación fluida.</p>
+      </div>
+      <div class="card">
+        <h3>Optimización SEO</h3>
+        <p>Mejoramos el posicionamiento de tu página en los motores de búsqueda para atraer mayor tráfico orgánico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Half Inverted Panel (Mitad Texto, Mitad Imagen) -->
+  <section id="acerca" class="half-panel">
+    <div class="half-content">
+      <h2>Soluciones Escalables para tu Negocio</h2>
+      <p>Combinamos diseño de vanguardia con un código limpio y estructurado. Nuestro enfoque garantiza que tu plataforma crezca al mismo ritmo que tus objetivos comerciales, manteniendo altos estándares de rendimiento.</p>
+    </div>
+    <div class="half-image"></div>
+  </section>
+
+  <!-- 5. Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Mi Portafolio MPA. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

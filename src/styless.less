@@ -1,0 +1,123 @@
+// Variables de diseño
+@primary-color: #2563eb;
+@text-color: #1f2937;
+@bg-light: #f3f4f6;
+@white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: @text-color;
+  line-height: 1.5;
+}
+
+/* 1. NavBar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: @white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: @primary-color;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: @text-color;
+      font-weight: 500;
+      &:hover { color: @primary-color; }
+    }
+  }
+}
+
+/* 2. Hero Panel */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/imagen.jpg') center/cover;
+  color: @white;
+  text-align: center;
+  padding: 6rem 2rem;
+
+  h1 { font-size: 3rem; margin-bottom: 1rem; }
+  p { font-size: 1.25rem; margin-bottom: 2rem; }
+  
+  .btn {
+    background: @primary-color;
+    color: @white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+/* 3. Cards (3 mínimo) */
+.cards-section {
+  padding: 4rem 5%;
+  text-align: center;
+
+  h2 { margin-bottom: 2.5rem; font-size: 2rem; }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    .card {
+      background: @bg-light;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+
+      h3 { margin-bottom: 1rem; color: @primary-color; }
+    }
+  }
+}
+
+/* 4. Half Inverted Panel (Mitad Texto, Mitad Imagen) */
+.half-panel {
+  display: flex;
+  flex-wrap: wrap;
+  background: @bg-light;
+
+  .half-content, .half-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .half-image {
+    background: url('../assets/imagen.jpg') center/cover;
+    min-height: 350px;
+  }
+}
+
+/* 5. Footer */
+.footer {
+  background: @text-color;
+  color: @white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
